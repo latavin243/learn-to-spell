@@ -17,3 +17,23 @@ public:
     }
 };
 ```
+
+21: 新的链表生成的时候可以先创建一个辅助的首节点dummy, 最后return dummy->next, 另外不需要生成新的节点, 直接借用原链表l1和l2的节点指针即可
+```
+class Solution {
+public:
+    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+        ListNode dummy(INT_MIN);
+        ListNode *cur = &dummy;
+
+        while(l1 && l2)
+        {
+            if(l1->val <= l2->val) cur->next = l1, l1 = l1->next;
+            else cur->next = l2, l2 = l2->next;
+            cur = cur->next;
+        }
+        cur->next = l1?l1:l2;
+        return dummy.next;
+    }
+};
+```
