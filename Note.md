@@ -1,4 +1,25 @@
-66: 和最快解法算法一致, 有vector头部插入元素的方法`v.insert(v.begin(), 1);`
+## 一些通用的c++用法整理
+
+```
+// 排序vector
+sort(v.begin(), v.end());
+
+// vector头部插入元素
+v.insert(v.begin(), 1);
+
+// 创建一个新vector
+vector<int> cur{nums[i], nums[left], nums[right]};
+```
+
+## 和最快解法算法一致
+
+66, 15
+
+## 有待改进
+
+16
+
+## 其他笔记
 
 58: 最快解法样例很精炼
 ```
@@ -37,7 +58,3 @@ public:
     }
 };
 ```
-
-15: 创建一个新vector `vector<int> cur{nums[i], nums[left], nums[right]};`, 算法逻辑和最优情况一致
-
-16: 有待提高
