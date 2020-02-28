@@ -13,7 +13,7 @@ vector<int> cur{nums[i], nums[left], nums[right]};
 
 ## 和最快解法算法一致
 
-66, 15
+66, 15, 110
 
 ## 有待改进
 
