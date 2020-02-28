@@ -37,6 +37,12 @@ unordered_map<string, string> m = {
 };
 ```
 
+other
+```c++
+// 需要返回多个值, 使用引用传参
+bool getHeightAndIsBalanced(TreeNode* t, int& height)
+```
+
 ## 和最快解法算法一致
 
 66, 15, 110, 412
