@@ -45,7 +45,7 @@ bool getHeightAndIsBalanced(TreeNode* t, int& height)
 
 ## 和最快解法算法一致
 
-66, 15, 110, 412
+66, 15, 110, 412, 111
 
 ## 有待改进
 
