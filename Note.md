@@ -39,3 +39,5 @@ public:
 ```
 
 15: 创建一个新vector `vector<int> cur{nums[i], nums[left], nums[right]};`, 算法逻辑和最优情况一致
+
+16: 有待提高
