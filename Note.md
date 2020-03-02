@@ -1,20 +1,35 @@
 ## 一些通用的c++用法整理
 
+vector
 ```c++
-// 排序vector
+vector<int> cur{1, 2, 3};
+
+// 排序
 sort(v.begin(), v.end());
 
-// vector头部插入元素
+// 头部插入元素
 v.insert(v.begin(), 1);
+```
 
-// 创建一个新vector
-vector<int> cur{nums[i], nums[left], nums[right]};
+set
+```c++
+unordered_set<int> s;
 
-// 判断set中不包含某个元素
-if(s.find(element) == s.end());
+// 判断不包含某个元素
+if(s.find(element) == s.end())
+    ...
 
-// set中去掉某元素
+// 去掉某元素
 s.erase(s.find(element));
+```
+
+map
+```c++
+unordered_map<string, string> m = {
+    {"RED","#FF0000"},
+    {"GREEN","#00FF00"},
+    {"BLUE","#0000FF"}
+};
 ```
 
 ## 和最快解法算法一致
@@ -75,6 +90,21 @@ public:
             result^=temp;
         }
         return result;
+    }
+};
+```
+
+169: 找众数, 较优解法
+```c++
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        int count = 0, candidate = 0;
+        for (int num : nums) {
+            if (count == 0) candidate = num;
+            count += (num == candidate) ? 1 : -1;
+        }
+        return candidate;
     }
 };
 ```
