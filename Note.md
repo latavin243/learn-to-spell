@@ -1,6 +1,6 @@
 ## 一些通用的c++用法整理
 
-```
+```c++
 // 排序vector
 sort(v.begin(), v.end());
 
@@ -9,6 +9,12 @@ v.insert(v.begin(), 1);
 
 // 创建一个新vector
 vector<int> cur{nums[i], nums[left], nums[right]};
+
+// 判断set中不包含某个元素
+if(s.find(element) == s.end());
+
+// set中去掉某元素
+s.erase(s.find(element));
 ```
 
 ## 和最快解法算法一致
@@ -22,7 +28,7 @@ vector<int> cur{nums[i], nums[left], nums[right]};
 ## 其他笔记
 
 58: 最快解法样例很精炼
-```
+```c++
 class Solution {
 public:
     int lengthOfLastWord(string s) {
@@ -40,7 +46,7 @@ public:
 ```
 
 21: 新的链表生成的时候可以先创建一个辅助的首节点dummy, 最后return dummy->next, 另外不需要生成新的节点, 直接借用原链表l1和l2的节点指针即可
-```
+```c++
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
@@ -55,6 +61,20 @@ public:
         }
         cur->next = l1?l1:l2;
         return dummy.next;
+    }
+};
+```
+
+136: 一堆数中只有一个出现次数为奇数, 有一个很巧妙的解法
+```c++
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int result = 0;
+        for(auto temp : nums){
+            result^=temp;
+        }
+        return result;
     }
 };
 ```
