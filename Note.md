@@ -11,6 +11,11 @@ sort(v.begin(), v.end());
 v.insert(v.begin(), 1);
 ```
 
+2D vector
+```c++
+vector<vector<int>> matrix(m, vector<int>(n, 0));
+```
+
 set
 ```c++
 unordered_set<int> s;
@@ -39,6 +44,10 @@ unordered_map<string, string> m = {
 ## 有待改进
 
 16, 887, 202(可用快慢指针思路)
+
+## 未通过
+
+289
 
 ## 其他笔记
 
