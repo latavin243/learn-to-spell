@@ -125,3 +125,15 @@ public:
 ```
 
 152: 最大乘积子序列, 可以用动规思路, 注意有±两维, 但是实际写法可以只用两个变量记录, 不需要数组记录结果
+
+189: 旋转列表, 使用三次反转 (reverse)
+```c++
+class Solution {
+public:
+    void rotate(vector<int>& nums, int k) {
+        reverse(nums.begin(), nums.end());
+        reverse(nums.begin(), nums.begin()+(k%nums.size()));
+        reverse(nums.begin()+(k%nums.size()), nums.end());
+    }
+};
+```
