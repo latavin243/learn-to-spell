@@ -55,6 +55,10 @@ bool getHeightAndIsBalanced(TreeNode* t, int& height)
 
 289
 
+## 需要多看discussion
+
+148
+
 ## 其他笔记
 
 58: 最快解法样例很精炼
