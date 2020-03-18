@@ -150,3 +150,8 @@ return n == 0 ? "" : convertToTitle(n / 26) + (char) (--n % 26 + 'A');
 ```
 
 383: 注意`map<T, int>`的判断条件 `if (!m.count(ch) || !m[ch])`
+
+401: 神奇的数二进制1的数量的方法
+```c++
+if (bitset<10>(h << 6 | m).count() == num) ...
+```
