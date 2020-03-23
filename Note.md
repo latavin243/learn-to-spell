@@ -37,6 +37,19 @@ unordered_map<string, string> m = {
 };
 ```
 
+priority queue
+```c++
+// 最小堆
+priority_queue<int> q;
+
+// 最大堆
+priority_queue<int, vector<int>, greater<int>> q;
+
+// 自定义
+auto cmp = [](int left, int right) { return (left ^ 1) < (right ^ 1); };
+priority_queue<int, vector<int>, decltype(cmp)> q3(cmp);
+```
+
 other
 ```c++
 // 需要返回多个值, 使用引用传参
