@@ -35,6 +35,12 @@ unordered_map<string, string> m = {
     {"GREEN","#00FF00"},
     {"BLUE","#0000FF"}
 };
+
+// 遍历
+for (auto &it : m) {
+    cout << it.first << endl; // key
+    cout << it.second << endl; // value
+}
 ```
 
 priority queue
@@ -62,7 +68,7 @@ bool getHeightAndIsBalanced(TreeNode* t, int& height)
 
 ## 有待改进
 
-16, 887, 202(可用快慢指针思路)
+16, 887, 202(可用快慢指针思路), 447
 
 ## 未通过
 
